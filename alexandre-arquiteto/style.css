@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #3F6651, #2A4A39, #143222);
+}
+
+img{
+  width: 100%;
+}
+
+ul{
+  list-style: none;
+}
+
+
+
+/* ========== HOME ========== */
+#home .home-content{
+  text-align: center;
+}
+
+#home .home-content .image{
+  width: 500px;
+}
+
+#home .home-content .navbar{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#home .home-content .navbar .circle{
+  width: 4px;
+  height: 4px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+#home .home-content .navbar li a{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
