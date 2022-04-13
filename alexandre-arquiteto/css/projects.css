@@ -53,6 +53,7 @@ body{
 }
 
 .fa-bars{
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -66,11 +67,11 @@ body{
 }
 
 .content h1{
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: var(--fonte-destaque);
   font-weight: 400;
   border-bottom: 1px solid white;
-  width: 65px;
+  width: 97px;
   margin-bottom: 1rem;
   color: white;
 }
@@ -86,31 +87,43 @@ body{
   position: relative;
 }
 
-.content .projects .project-01 .imagem{ 
-  width: 100%;
-  transition: transform 1s;
-}
-
-.project-01:hover .imagem{
-  transform: scale(1.01);
-}
-
-
-
 .content .projects .project-01 .project-title{
   position: absolute;
-  top: 65px;
+  bottom: 10px;
   left: 10px;
-  font-size: .6rem;
+  font-size: 1rem;
   font-family: var(--fonte-destaque);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: white;
+  cursor: pointer;
+}
+
+footer{
+  width: 100%;
+  margin-top: 5rem;
+  background-color: rgb(0, 46, 18);
 }
 
 
+/*============ MEDIA 500px ============*/
+@media(min-width: 500px){
+  .content .projects{
+    grid-template-columns: auto auto auto;
+    gap: .5rem;
+    row-gap: .1rem;
+  }
+}
+
+
+/*============ MEDIA 768px ============*/
 @media(min-width: 768px){
+  .container{
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
 /* ========== STYLING HEADER ========== */
 #header .navbar ul{
   display: flex;
@@ -119,6 +132,12 @@ body{
 
 .fa-bars{
   display: none;
+}
+
+.content .projects{
+  grid-template-columns: auto auto auto auto;
+  gap: .5rem;
+  row-gap: .1rem;
 }
 
 }

@@ -38,14 +38,14 @@ ul{
 }
 
 #home .home-content .image{
-  width: 300px;
+  max-width: 490px;
   margin-bottom: 5rem;
 }
 
 #home .home-content .navbar{
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   font-family: var(--fonte-padrao);
 }
 
@@ -68,14 +68,8 @@ ul{
 
 @media(min-width: 500px){
   /* ========== HOME ========== */
-  #home .home-content .image{
-    width: 500px;
-    margin-bottom: 5rem;
-  }
-
   #home .home-content .navbar{
     gap: 3rem;
-    
   }
   
 }
