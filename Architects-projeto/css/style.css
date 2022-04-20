@@ -1,0 +1,311 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/*========== RESET ==========*/
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+img{
+  width: 100%;
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/*========== LAYOUT ==========*/
+.container{
+  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+}
+
+.content{
+  padding: 4rem 0 0 0;
+}
+
+.title{
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.title-pj{
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 8px 16px;
+}
+
+/*========== HEADER ==========*/
+header{
+  background-color: white;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  font-size: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 20px;
+}
+
+.logo{
+  padding: 10px;
+  transition: .3s;
+  cursor: pointer;
+  letter-spacing: 4px;
+}
+
+.logo:hover{
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.logo span{
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+header nav ul{
+  display: none;
+}
+
+
+/*========== HOME ==========*/
+#home{
+ max-width: 1500px;
+ position: relative;
+}
+
+#home .img-home{
+  max-width: 100%;
+  height: auto;
+}
+
+#home .logo-home{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgba(255, 255, 255, 0.856);
+  font-size: 36px;
+}
+
+#home .logo-home h1{
+  display: none;
+}
+
+#home .logo-home span{
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(0, 0, 0, 0.701);
+}
+
+
+/*========== PROJECTS ==========*/
+.projects .content .title{
+  margin-bottom: 3rem;
+}
+
+.projects .content .gallery-projects{
+  display: grid;
+  gap: .8rem;
+}
+
+.projects .content .gallery-projects .project{
+  position: relative;
+}
+
+.projects .content .gallery-projects .project .title-pj{
+  position: absolute;
+  top: 0;
+}
+
+
+/*========== ABOUT ==========*/
+.about .content .cards{
+  margin-top: 3rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.about .content .cards h3{
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.about .content .cards .function{
+  font-size: 15px;
+  opacity: 0.60;
+  margin-bottom: 1.5rem;
+}
+
+.about .content .cards .text{
+  font-size: 15px;
+}
+
+
+.about .content .cards .btn-card{
+  width: 100%;
+  border: 0;
+  font-size: 15px;
+  padding: .5rem;
+  border-radius: .2rem;
+  margin-top: 1rem;
+}
+
+/*========== CONTACT ==========*/
+.contact .content form{
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact .content form input{
+  border: 1px solid lightgrey;
+  font-size: 1rem;
+  padding: 10px 8px;
+}
+
+.contact .content .btn-contact{
+  border: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  padding: 12px 20px;
+  margin-bottom: 3rem;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.contact .content .btn-contact:hover{
+  background-color: lightgray;
+  color: black;
+}
+
+
+/*========== FOOTER ==========*/
+footer{
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: .5rem;
+  color: white;
+  background-color: black;
+}
+
+footer p a{
+  color: white;
+  text-decoration: underline;
+}
+
+footer p a:hover{
+  color: lightgrey;
+}
+
+
+
+
+
+
+
+
+/*==================== MEDIA 600PX ====================*/
+@media (min-width: 600px){
+  header nav ul{
+    display: flex;
+    gap: .7rem;
+    letter-spacing: 4px;
+  }
+
+  header nav ul li{
+    padding: 10px;
+    transition: .3s;
+  }
+
+  header nav ul li:hover{
+    background-color: lightgrey;
+  }
+
+  /*========== HOME ==========*/
+  #home .logo-home{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 4px;
+    color: white;
+    
+    
+  }
+
+  #home .logo-home h1{
+    display: inline;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+
+  /*========== PROJECTS ==========*/
+  .projects .content .gallery-projects{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+  }
+
+
+  /*========== ABOUT ==========*/
+  .about .content .cards{
+    grid-template-columns: auto auto;
+    display: grid;
+    gap: 2rem 1rem;
+  }
+}
+
+/*==================== MEDIA 992PX ====================*/
+@media (min-width: 992px){
+
+  /*========== PROJECTS ==========*/
+  .projects .content .gallery-projects{
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+  }
+
+
+  /*========== ABOUT ==========*/
+  .about .content .cards{
+    grid-template-columns: auto auto auto auto;
+  }
+}
