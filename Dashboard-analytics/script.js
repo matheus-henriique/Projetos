@@ -1,6 +1,6 @@
 document.getElementById("btn-menu").onclick = function() {myFunction()};
 
-/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+
 function myFunction() {
-  document.getElementById("nav").classList.toggle("show");
+  document.getElementById("barLeft").classList.toggle("show");
 }

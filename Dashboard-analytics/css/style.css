@@ -10,7 +10,7 @@
 
 body{
   font-family: var(--font-padrao);
-  background-color: lightgray;
+  background-color: #F1F1F1;
 }
 
 img{
@@ -57,103 +57,29 @@ header nav .menu #btn-menu{
 }
 
 
-/* --------- MAIN --------- */
-main{
-  display: grid;
-  
-  margin-top: 2.7rem;
-  position: relative;
-}
-
-/* ----- NAV ----- */
-.nav{
+/* --------- BAR-LEFT --------- */
+.barLeft{
+  display: none;
   position: fixed;
   width: 300px;
-  height: 100vh;
-  display: none;
-  background-color: rgb(255, 255, 255);
-  
- 
+  background-color: white;
 }
 
 .show{
-  display: inline;
-}
-
-.nav .content .perfil{
   display: flex;
-  gap: 2.5rem;
-  padding: 1.5rem 0 2rem 1rem;
-  border-bottom: 1px solid lightgrey;
-}
-
-.nav .content .perfil .img-avatar{
-  width: 46px;
-  clip-path: circle();
-}
-
-.nav .content .perfil .navperfil{
-  display: flex;
-  flex-flow: column;
-  gap: 1rem;
-}
-
-.nav .content .perfil .navperfil .menu-perfil{
-  display: flex;
-  justify-content: space-around;
 }
 
 
-.nav .content .perfil .navperfil .name-perfil{
-  font-weight: bold;
+/* --------- BAR-RIGTH --------- */
+.barRigth .Dashboard{
+  padding-top: 3rem;
 }
 
-/* ----- NAVBAR ----- */
-.navbar h1{
-  font-size: 18px;
-  font-weight: normal;
-  padding: 2rem 0 1rem 1rem;
-}
 
-.navbar .close{
-  display: flex;
-  align-items: center;
-  gap: .7rem;
-  padding: 1.2rem 1.5rem;
-  cursor: pointer;
-  color: white;
-  background-color: #616161;
-}
 
-.navbar .close:hover{
-  background-color: #000000;
-}
 
-.navbar .options{
-  display: flex;
-  flex-flow: column;
-}
 
-.navbar .spotlight{
-  color: white;
-  background-color: #2196F3;
-}
 
-.navbar .spotlight:hover{
-  color: black;
-}
-
-.navbar .options .option{
-  display: flex;
-  gap: .5rem;
-  padding: .580rem 1.3rem;
-  cursor: pointer;
-  transition: .2s;
-}
-
-.navbar .options .option:hover{
-  background-color: lightgray;
-}
 
 
 /* --------- DASHBOARD --------- */
@@ -178,7 +104,9 @@ main{
 
 .Dashboard .boxs-Dashboard .box .content 
 .fa-comment,
-.fa-eye
+.eye,
+.fa-share-nodes,
+.user
 {
   font-size: 3rem;
 }
@@ -228,16 +156,22 @@ main{
     display: none;
   }
 
-    main{
-      display: grid;
-      grid-template-columns: auto auto;
-    }
-  .nav{
-    display: inline;
-    position: static;
+  main{
+    display: grid;
+    grid-template-columns: 300px auto;
+
+  }
+    
+  .barLeft{
+    display: block;
   }
 
-  .navbar .close{
-    display: none;
+  .barRigth .boxs-Dashboard{
+    display: flex;
+    gap: 1rem;
+  }
+
+  .barRigth .boxs-Dashboard .box{
+    width: 100%;
   }
 }
