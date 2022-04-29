@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somando Números</title>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      height: 100vh;
+      font-family: sans-serif;
+      background-image: linear-gradient(to left, red, blue);
+    }
+
+    h1{
+      font-size: 3rem;
+    }
+
+    span{
+      font-size: 2rem;
+    }
+
+    input:focus{
+      outline: 0;
+      background-color: lightgray;
+    }
+
+    .calculadora{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .calculadora
+     #txtn1,
+     #txtn2{
+       width: 50px;
+       padding: 1rem;
+       border: 0;
+       border-radius: .2rem;
+    }
+
+    .btn-soma{
+      border: 0;
+      border-radius: .1rem;
+      padding: .5rem;
+      color: white;
+      background-color: black;
+      cursor: pointer;
+      transition: .3s;
+    }
+    .btn-soma:hover{
+      color: black;
+      background-color: lightgray;
+    }
+
+    #res{
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Somando Valores</h1>
+  <div class="calculadora">
+    <input type="number" name="txtn1" id="txtn1">
+    <span>+</span>
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" class="btn-soma" onclick="somar()">
+  </div>
+  <div id="res">Resultado</div>
+
+  <script>
+    function somar(){
+      var tn1 = document.getElementById('txtn1')
+      var tn2 = document.querySelector('input#txtn2')
+      var res = document.getElementById('res')
+      var n1 = Number(tn1.value)
+      var n2 = Number(tn2.value)
+      var s = n1 + n2
+      res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}<strong>`
+    }
+  </script>
+</body>
+</html>

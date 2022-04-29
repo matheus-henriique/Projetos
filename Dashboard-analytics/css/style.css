@@ -62,6 +62,7 @@ header nav .menu #btn-menu{
   display: none;
   position: fixed;
   width: 300px;
+  height: 100vh;
   background-color: white;
 }
 
@@ -69,10 +70,73 @@ header nav .menu #btn-menu{
   display: flex;
 }
 
+.barLeft .content{
+  padding-top: 2.8rem;
+  width: 100%;
+}
 
-/* --------- BAR-RIGTH --------- */
-.barRigth .Dashboard{
-  padding-top: 3rem;
+.barLeft .perfil{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.4rem 0 2rem 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.barLeft .perfil .img-avatar{
+  width: 45px;
+  clip-path: circle();
+}
+
+.barLeft .perfil .navperfil{
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.barLeft .perfil .navperfil .name-perfil{
+  font-weight: bold;
+}
+
+.barLeft .perfil .navperfil .menu-perfil{
+  display: flex;
+  justify-content: space-between;
+}
+
+.barLeft .navbar h1{
+  padding: 0 0 1rem 1rem;
+  font-weight: normal;
+  font-size: 1.125rem;
+}
+
+.barLeft .navbar .close{
+  display: flex;
+  gap: 1rem;
+  padding: 1.2rem;
+  color: white;
+  background-color: #616161;
+  cursor: pointer;
+  transition: .2s;
+}
+.barLeft .navbar .close:hover{
+  background-color: black;
+}
+
+.barLeft .navbar .options .option{
+  display: flex;
+  gap: .5rem;
+  padding: .6rem 1rem;
+  transition: .2s;
+  cursor: pointer;
+}
+.barLeft .navbar .options .option:hover{
+  background-color: lightgray;
+}
+
+.barLeft .navbar .options .option.spotlight{
+  color: white;
+  background-color: #2196F3;
 }
 
 
@@ -80,6 +144,10 @@ header nav .menu #btn-menu{
 
 
 
+/* --------- BAR-RIGTH --------- */
+.barRigth .Dashboard{
+  padding-top: 3rem;
+}
 
 
 /* --------- DASHBOARD --------- */
@@ -136,6 +204,50 @@ header nav .menu #btn-menu{
 }
 
 
+.painel{
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.painel h2{
+  font-weight: 400;
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.painel .share{
+  font-size: 1.3rem;
+}
+
+.painel .regions{
+  max-width: 328px;
+  width: 100%;
+}
+
+.painel .feeds, table {
+  width: 100%;
+  background-color: red;
+}
+
+.painel .feeds table{
+  border-collapse: collapse;
+}
+
+.painel .feeds table tr{
+  width: 100%;
+}
+.painel .feeds table tr:nth-child(odd){
+  background-color: rgb(255, 255, 255);
+}
+
+.painel .feeds table tr th{
+  padding: .5rem;
+}
+
+
+
 
 
 
@@ -145,6 +257,10 @@ header nav .menu #btn-menu{
   .barRigth .boxs-Dashboard{
     display: flex;
     gap: 1rem;
+  }
+
+  .barRigth .boxs-Dashboard .box{
+    width: 100%;
   }
 }
 
@@ -171,7 +287,9 @@ header nav .menu #btn-menu{
     display: block;
   }
 
-  
+  .barLeft .navbar .close{
+    display: none;
+  }
 
   .teste{
     justify-content: center;
