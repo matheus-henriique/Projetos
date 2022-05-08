@@ -203,12 +203,18 @@ header nav .menu #btn-menu{
   background-color: #FF9800;
 }
 
-
 .painel{
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 1rem;
   margin-top: 1.5rem;
 }
+
+/*.painel{
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}*/
 
 .painel h2{
   font-weight: 400;
@@ -228,7 +234,7 @@ header nav .menu #btn-menu{
 
 .painel .feeds, table {
   width: 100%;
-  background-color: red;
+  text-align: left;
 }
 
 .painel .feeds table{
@@ -243,7 +249,8 @@ header nav .menu #btn-menu{
 }
 
 .painel .feeds table tr th{
-  padding: .5rem;
+  padding: .6rem 1rem;
+  font-weight: 400;
 }
 
 
